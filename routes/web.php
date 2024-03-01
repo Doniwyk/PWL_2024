@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\View\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,40 +20,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // BASIC ROUTING
-Route::get('/', function () {
-    return 'Selamat Datang';
-});
+// Route::get('/', function () {
+//     return 'Selamat Datang';
+// });
 
-Route::get('/hello', function () {
-    return 'Hello World';
-});
+// Route::get('/hello', function () {
+//     return 'Hello World';
+// });
 
-Route::get('/about', function () {
-    return 'Doni Wahyu Kurniawan <br> 2241720015';
-});
+// Route::get('world', function () {
+//     return 'World';
+// });
+
+// Route::get('/about', function () {
+//     return 'Doni Wahyu Kurniawan <br> 2241720015';
+// });
 
 // ROUTE PARAMETER
-Route::get('/user/{name}', function ($name) {
-    return 'Nama saya ' . $name;
-});
+// Route::get('/user/{name}', function ($name) {
+//     return 'Nama saya ' . $name;
+// });
 
-Route::get('/posts/{post}/comments/{comment}', function 
-($postId, $commentId) { 
-    return 'Pos ke-'.$postId." Komentar ke-: ".$commentId; 
-});
+// Route::get('/posts/{post}/comments/{comment}', function 
+// ($postId, $commentId) { 
+//     return 'Pos ke-'.$postId." Komentar ke-: ".$commentId; 
+// });
 
 // Route::get('/article/{id}', function ($id) { 
 //     return 'Artikel dengan id- '.$id; 
 // });
 
 // OPTIONAL PARAMETER
-Route::get('/user/{name?}', function ($name=null) { 
-    return 'Nama saya '.$name; 
-});
-
-Route::get('/user/{name?}', function ($name='John') { 
-    return 'Nama saya '.$name; 
-});
+// Route::get('/user/{name?}', function ($name='John') { 
+//     return 'Nama saya '.$name; 
+// });
 
 // MEMBUAT CONTROLLER
 Route::get('/hello', [WelcomeController::class, 'hello']);
